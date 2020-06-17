@@ -1,0 +1,25 @@
+{
+    "name": "pdb-language",
+    "displayName": "pdb-language",
+    "description": "Language support for PDB (Protein Data Bank) files",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.46.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "pdb",
+            "aliases": ["Protein Data Bank", "pdb"],
+            "extensions": [".pdb"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "pdb",
+            "scopeName": "source.pdb",
+            "path": "./syntaxes/pdb.tmLanguage.json"
+        }]
+    }
+}

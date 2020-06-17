@@ -1,0 +1,44 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Protein Data Bank",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#linecomment"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [{
+        "name": "keyword.control.pdb",
+        "match": "^(HETATM|ATOM|TER|CONECT|END|MASTER)\\b"
+      }]
+    },
+    "strings": {
+      "name": "string.quoted.double.pdb",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.pdb",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "linecomment": {
+      "patterns": [
+        {
+          "begin": "^REMARK",
+          "end":"\\n",
+          "name": "comment"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.pdb"
+}
