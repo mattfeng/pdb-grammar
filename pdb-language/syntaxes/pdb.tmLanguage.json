@@ -3,6 +3,12 @@
   "name": "Protein Data Bank",
   "patterns": [
     {
+      "include": "#header"
+    },
+    {
+      "include": "#title"
+    },
+    {
       "include": "#keywords"
     },
     {
@@ -13,11 +19,37 @@
     }
   ],
   "repository": {
+    "header": {
+      "begin": "^HEADER\\b",
+      "end": "\\n",
+      "name": "markup.header",
+      "patterns": [
+        {
+          "match": "(?<=.{62})\\b[0-9A-Z]{1,4}\\b",
+          "name": "markup.header.idcode"
+        }
+      ]
+    },
+    "title": {
+      "patterns": [
+        {
+          "name": "markup.title",
+          "begin": "^TITLE\\b",
+          "end": "\\n"
+        }
+      ]
+    },
     "keywords": {
-      "patterns": [{
-        "name": "keyword.control.pdb",
-        "match": "^(HETATM|ATOM|TER|CONECT|END|MASTER)\\b"
-      }]
+      "patterns": [
+        {
+          "name": "keyword.control.pdb",
+          "match": "^(HETATM|ATOM|TER|CONECT|END|MASTER)\\b"
+        },
+        {
+          "name": "keyword.control.pdb",
+          "match": "^(COMPND|SOURCE|KEYWDS|AUTHOR|REVDAT)\\b"
+        }
+      ]
     },
     "strings": {
       "name": "string.quoted.double.pdb",
@@ -33,9 +65,17 @@
     "linecomment": {
       "patterns": [
         {
-          "begin": "^REMARK",
+          "name": "comment",
+          "begin": "^(REMARK)\\b (\\b\\d\\d\\d| \\b\\d\\d|  \\b\\d)\\b",
           "end":"\\n",
-          "name": "comment"
+          "beginCaptures": {
+            "1": {
+              "name": "comment.line.remark"
+            },
+            "2": {
+              "name": "comment.line.number"
+            }
+          }
         }
       ]
     }

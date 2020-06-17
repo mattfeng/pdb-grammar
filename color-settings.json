@@ -1,0 +1,36 @@
+{
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "source.pdb markup.header",
+        "settings": {
+          "foreground": "#ffb477"
+        }
+      },
+      {
+        "scope": "source.pdb markup.header.idcode",
+        "settings": {
+          "foreground": "#ff9277"
+        }
+      },
+      {
+        "scope": "source.pdb markup.title",
+        "settings": {
+          "foreground": "#ffd477"
+        }
+      },
+      {
+        "scope": "source.pdb comment.line.remark",
+        "settings": {
+          "foreground": "#3f3f3f"
+        }
+      },
+      {
+        "scope": "source.pdb comment.line.number",
+        "settings": {
+          "foreground": "#6d6d6d"
+        }
+      },
+    ]
+  }
+}
