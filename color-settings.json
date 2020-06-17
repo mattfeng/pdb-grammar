@@ -20,6 +20,30 @@
         }
       },
       {
+        "scope": "source.pdb comment.compound",
+        "settings": {
+          "foreground": "#979797"
+        }
+      },
+      {
+        "scope": "source.pdb comment.source",
+        "settings": {
+          "foreground": "#777777"
+        }
+      },
+      {
+        "scope": "source.pdb comment.keywords",
+        "settings": {
+          "foreground": "#c8ffbd"
+        }
+      },
+      {
+        "scope": "source.pdb comment.experimentdata",
+        "settings": {
+          "foreground": "#bdffe3"
+        }
+      },
+      {
         "scope": "source.pdb comment.line.remark",
         "settings": {
           "foreground": "#3f3f3f"
@@ -29,6 +53,24 @@
         "scope": "source.pdb comment.line.number",
         "settings": {
           "foreground": "#6d6d6d"
+        }
+      },
+      {
+        "scope": "source.pdb entity.atom",         // entire ATOM line
+        "settings": {
+          "foreground": "#ffffff"
+        }
+      },
+      {
+        "scope": "source.pdb entity.atom.keyword", // ATOM keyword
+        "settings": {
+          "foreground": "#89b8ff"
+        }
+      },
+      {
+        "scope": "source.pdb entity.atom.coords", // ATOM coordinates
+        "settings": {
+          "foreground": "#ffd29f"
         }
       },
     ]

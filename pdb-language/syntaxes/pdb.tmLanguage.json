@@ -9,7 +9,19 @@
       "include": "#title"
     },
     {
-      "include": "#keywords"
+      "include": "#compound"
+    },
+    {
+      "include": "#source"
+    },
+    {
+      "include": "#pdbkeywords"
+    },
+    {
+      "include": "#experiment"
+    },
+    {
+      "include": "#atoms"
     },
     {
       "include": "#strings"
@@ -39,15 +51,39 @@
         }
       ]
     },
-    "keywords": {
+    "compound": {
+      "begin": "^COMPND\\b",
+      "end": "\\n",
+      "name": "comment.compound"
+    },
+    "source": {
+      "begin": "^SOURCE\\b",
+      "end": "\\n",
+      "name": "comment.source"
+    },
+    "pdbkeywords": {
+      "begin": "^KEYWDS\\b",
+      "end": "\\n",
+      "name": "comment.keywords"
+    },
+    "experiment": {
+      "begin": "^EXPDTA\\b",
+      "end": "\\n",
+      "name": "comment.experimentdata"
+    },
+    "atoms": {
+      "begin": "^(ATOM)\\b",
+      "end": "\\n",
+      "name": "entity.atom",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.atom.keyword"
+        }
+      },
       "patterns": [
         {
-          "name": "keyword.control.pdb",
-          "match": "^(HETATM|ATOM|TER|CONECT|END|MASTER)\\b"
-        },
-        {
-          "name": "keyword.control.pdb",
-          "match": "^(COMPND|SOURCE|KEYWDS|AUTHOR|REVDAT)\\b"
+          "name": "entity.atom.coords",
+          "match": "(?<=.{30})[\\-0-9. ]{24}"
         }
       ]
     },

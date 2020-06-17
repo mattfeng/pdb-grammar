@@ -9,3 +9,4 @@
 * [TextMate Regular Expressions (Oniguruma syntax)](https://macromates.com/manual/en/regular_expressions)
 * [TextMate Language Grammars](https://macromates.com/manual/en/language_grammars)
 * [Customizing a Color Theme for Language Specific Tokens](https://github.com/microsoft/vscode/issues/66729)
+* [Regex Lookahead and Lookbehinds](https://www.rexegg.com/regex-lookarounds.html)
