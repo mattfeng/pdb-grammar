@@ -83,7 +83,15 @@
       "patterns": [
         {
           "name": "entity.atom.coords",
-          "match": "(?<=.{30})[\\-0-9. ]{24}"
+          "match": "(?<=ATOM.{26})[\\-0-9. ]{24}"
+        },
+        {
+          "name": "entity.atom.serialnum",
+          "match": "(?<=ATOM.{2})[0-9 ]{5}"
+        },
+        {
+          "name": "entity.atom.name",
+          "match": "(?<=ATOM.{8})[0-9A-Z ]{4}"
         }
       ]
     },

@@ -8,5 +8,7 @@
 * [VSCode Syntax Highlight Guide](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide)
 * [TextMate Regular Expressions (Oniguruma syntax)](https://macromates.com/manual/en/regular_expressions)
 * [TextMate Language Grammars](https://macromates.com/manual/en/language_grammars)
+* [Writing a TextMate Language Grammar](https://www.apeth.com/nonblog/stories/textmatebundle.html)
 * [Customizing a Color Theme for Language Specific Tokens](https://github.com/microsoft/vscode/issues/66729)
 * [Regex Lookahead and Lookbehinds](https://www.rexegg.com/regex-lookarounds.html)
+* [Regex Debugger](https://regex101.com/)
